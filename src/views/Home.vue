@@ -47,6 +47,9 @@ export default {
       };
       signer.sendTransaction(tx).then((txObj) => {
         console.log("txHash", txObj.hash);
+        document.getElementById("amount").value = "";
+        document.getElementById("receiverAaddress").value = "";
+        alert("Done");
       });
     },
   },
@@ -133,8 +136,8 @@ export default {
   display: none;
 }
 
-.home button:focus {
-  transform: scale(0.9);
+.home button:hover {
+  transform: scale(1.1);
 }
 
 @media (max-width: 900px) {
